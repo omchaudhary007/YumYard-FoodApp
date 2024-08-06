@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="description" content="Enjoy tasty burgers and more at YumYard. Order online for a quick and delicious meal.">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>YumYard - Supper delicious Burger in town!</title>
+      <link rel="icon" type="image/x-icon" href="favicon.svg">
+      <link rel="stylesheet" href="output.css" />
+      <style>
+         @import url("https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Shadows+Into+Light&display=swap");
+      </style>
+   </head>
+   <body>
+
+      <!-- **** Hero and Nav section *** -->
+    
+      <div class="main-container w-full bg-cover bg-no-repeat" style="background-image: url(images/hero-bg.webp)">
+         <!-- Header section -->
+         <div class="header w-full px-4 py-5 mb-0.5 text-white transition-all duration-300 flex items-center justify-between min-[500px]:px-20">
+            <a href="#" class="header-name font-bold text-3xl">YumYard</a>
+
+            <!-- Navbar section -->
+            <nav class="navbar flex items-center gap-10">
+               <ul class="nav-links font-medium whitespace-nowrap flex gap-8 max-[500px]:hidden">
+                  <!-- class name used for scrollto_element feature -->
+  
+                  <li>
+                     <a class="hero-sec" href="#Home" onclick="closeNav(); scrolltoElement(this.className)">Home</a>
+                  </li>
+                  <li>
+                     <a class="ad-sec" href="#About" onclick="closeNav(); scrolltoElement(this.className)">About Us</a>
+                  </li>
+                  <li>
+                     <a class="popular-dish-sec" href="#Shop" onclick="closeNav(); scrolltoElement(this.className)">Shop</a>
+                  </li>
+                  <li>
+                     <a class="blog-sec" href="#Blog" onclick="closeNav(); scrolltoElement(this.className)">Blog</a>
+                  </li>
+                  <li>
+                     <a class="footer-sec" href="#Contact" onclick="closeNav(); scrolltoElement(this.className)">Contact Us</a>
+                  </li>
+               </ul>
+               <div class="nav-buttons flex items-center gap-4">
+                  <ion-icon name="search" class="h-5 w-5 cursor-pointer"></ion-icon>
+                  <button class="btn max-[500px]:hidden">Reservation</button>
+                  <ion-icon id="nav-hamper" name="menu-outline" class="h-7 w-7 cursor-pointer min-[501px]:hidden" onclick="showNav()"></ion-icon>
+                  <ion-icon id="nav-closer" name="close-circle-outline" class="hidden h-7 w-7 fixed top-[10%] right-[5%] z-20 text-black cursor-pointer" onclick="closeNav()"></ion-icon>
+               </div>
+            </nav>
+         </div>
+         <p class="line h-[0.1px] bg-white opacity-20"></p>
+         
+         <!-- Hero section -->
+         <main class="hero-section hero-sec flex min-[572px]:pl-20">
+            <div class="hero-left w-1/2 my-20 text-white flex flex-col gap-6">
+               <p class="mb-2 text-4xl text-dark-orange cursived">Eat And Sleep</p>
+               <p class="text-7xl font-bold leading-[6rem]">Supper delicious Burger in town!</p>
+               <p class="text-xl opacity-80 w-[80%]">Food is any substance consumed to provide nutritional support for an organism.</p>
+               <button class="btn mb-6">Book a table</button>
+            </div>
+            <div class="hero-right w-1/2 relative flex items-end justify-end max-[572px]:hidden">
+               <img class="absolute z-[2]" src="images/hero-banner-bg.webp" alt="hero-banner-bg"/>
+               <img class="absolute z-[2]" src="images/hero-bg-shape.webp" alt="hero-bg" />
+               <img class="my-10 bg-transparent z-[2]" src="images/hero-banner.webp" alt="hero-banner"/>
+            </div>
+         </main>
+      </div>
+
+
+      <!-- *** Item-type section *** -->
+
+      <section class="item-type-section w-full relative bg-section">
+         <div class="scrollbar w-[88%] m-auto mb-10 px-2 pt-20 pb-10 text-black text-center overflow-x-auto overflow-y-hidden grid grid-flow-col gap-3">
+            
+            <!-- itemType-1 -->
+            <div class="items-types">
+               <img class="w-14" src="images/pizza.svg" loading="lazy" alt="pizza">
+               <h3 class="text-xl font-bold">Maxican Pizza</h3>
+               <p class="max-w-[70%]">Food is any substance consumed to provide nutritional support for anorganism.</p>
+               <img src="images/promo-1.webp" loading="lazy" alt="promo-1">
+            </div>
+            
+            <!-- itemType-2 -->
+            <div class="items-types">
+               <img  class="w-14" src="images/softDrink.svg" loading="lazy" alt="softDrink">
+               <h3 class="text-xl font-bold">Soft Drinks</h3>
+               <p class="max-w-[70%]">Food is any substance consumed to provide nutritional support for anorganism.</p>
+               <img src="images/promo-2.webp" loading="lazy" alt="promo-2">
+            </div>
+
+            <!-- itemType-3 -->
+            <div class="items-types">
+               <img  class="w-14" src="images/freachFries.svg" loading="lazy" alt="freachFries">
+               <h3 class="text-xl font-bold">French Fry</h3>
+               <p class="max-w-[70%]">Food is any substance consumed to provide nutritional support for anorganism.</p>
+               <img src="images/promo-3.webp" loading="lazy" alt="promo-3">
+            </div>
+
+            <!-- itemType-4 -->
+            <div class="items-types">
+               <img  class="w-14" src="images/burger.svg" loading="lazy" alt="burger">
+               <h3 class="text-xl font-bold">Burger Kingo</h3>
+               <p class="max-w-[70%]">Food is any substance consumed to provide nutritional support for anorganism.</p>
+               <img src="images/promo-4.webp" loading="lazy" alt="promo-4">
+            </div>
+
+            <!-- itemType-5 -->
+            <div class="items-types">
+               <img  class="w-14" src="images/chicken.svg" loading="lazy" alt="chicken">
+               <h3 class="text-xl font-bold">Chicken Masala</h3>
+               <p class="max-w-[70%]">Food is any substance consumed to provide nutritional support for anorganism.</p>
+               <img src="images/promo-5.webp" loading="lazy" alt="promo-5">
+            </div>
+         </div>
+         <!-- Zig-zager image-->
+         <img class="zig-zag w-full" src="images/shape-white.webp" alt="zig-zag">
+      </section>
+
+
+      <!-- *** Ad-scetion ***-->
+
+      <section class="ad-section ad-sec w-full p-20 flex gap-4 max-[500px]:flex-col max-[500px]:p-2 max-[500px]:items-center max-[500px]:text-center">
+         <div class="ad-left w-1/2 relative flex flex-col items-center max-[500px]:w-2/3">
+            <img class="w-3/4" src="images/ad-banner.webp" loading="lazy" alt="ad-banner">
+            <img class="absolute w-1/3 left-[25%]" style="animation: scaler 1s linear infinite alternate;" src="images/ad-offer.webp" loading="lazy" alt="ad-offer">
+         </div>
+         <div class="ad-right w-1/2 flex flex-col gap-4 max-[500px]:w-2/3 ">
+            <h3 class="font-bold text-[2.5rem]">Caferio, Burgers, and Best Pizzas <span class="text-dark-orange">in Town!</span></h3>
+            <p class="opacity-70">
+               The restaurants in Hangzhou also catered to many northern Chinese who had
+               fled south from Kaifeng during the Jurchen invasion of the 1120s, while it
+               is also known that many restaurants were run by families.
+            </p>
+            <ul class="flex flex-col gap-2 max-[500px]:m-auto">
+               <li class="flex gap-2 items-center">
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  <p class="font-bold">Delicious & Healthy Foods</p>
+               </li>
+               <li class="flex gap-2 items-center">
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  <p class="font-bold">Spacific Family And Kids Zone</p>
+               </li>
+               <li class="flex gap-2 items-center">
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  <p class="font-bold">Music & Other Facilities</p>
+               </li>
+               <li class="flex gap-2 items-center">
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  <p class="font-bold">Fastest Food Home Delivery</p>
+               </li>
+            </ul>
+            <button class="btn mt-4 text-white hover:bg-[var(--dark-orange)] max-[500px]:m-auto">Order now</button>
+         </div>
+      </section>
+
+
+      <!-- *** Popular-dish section *** -->
+
+      <section class="popular-dish-section popular-dish-sec w-full pb-44 bg-section">
+         <img class="zig-zag w-full pt-24 bg-section rotate-180" src="images/shape-white.webp" alt="shape-white">
+         <div class="dish-common-data w-1/2 m-auto text-center">
+            <p class="text-red-600 font-bold mb-2">Popular Dishes</p>
+            <h3 class="font-bold text-[2.5rem] mb-4">Our Delicious <span class="text-dark-orange">Foods</span></h3>
+            <p class="mb-4 opacity-70">Food is any substance consumed to provide nutritional support for an organism.</p>
+         </div>
+
+         <div class="dish-filter font-medium flex items-center justify-center gap-4 flex-wrap">
+            <button class="px-5 py-1 bg-[var(--dark-orange)] text-white border border-slate-200">All</button>
+            <button class="px-5 py-1 bg-white border border-slate-200">Pizza</button>
+            <button class="px-5 py-1 bg-white border border-slate-200">Burger</button>
+            <button class="px-5 py-1 bg-white border border-slate-200">Drinks</button>
+            <button class="px-5 py-1 bg-white border border-slate-200">Sandwich</button>
+         </div>
+         
+         <div class="dish-list max-w-[85%] m-auto mt-10 font-bold grid grid-cols-3 gap-4 max-[550px]:grid-cols-2 max-[400px]:grid-cols-1">
+            
+            <!-- Dish-1 -->
+            <div class="dish p-4 py-10 relative bg-white border shadow-md whitespace-nowrap flex flex-col items-start gap-4">
+               <p class="discount px-3 py-1 absolute top-[3%] text-xs text-white bg-red-600">-15%</p>
+               <button class="order-dish position-center absolute z-[-1] px-10 py-2 text-white text-sm bg-red-500 transition-all duration-1000 hover:text-white hover:bg-orange-400">Order Now</button>
+               <img class="m-auto" src="images/food-menu-1.webp" loading="lazy" alt="food-menu-1">
+               <div class="w-full flex gap-2 items-end">
+                  <p class="dish-name opacity-70">Chicken</p>
+                  <div class="starts text-dark-orange">
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                  </div>
+               </div>
+               <h3 class="text-lg">Fried Chicken Unlimited</h3>
+               <div class="dish-price-section flex gap-2">
+                  <p class="text-red-600">PRICE:</p>
+                  <span class="current-price text-dark-orange">$49.00</span>
+                  <p class="old-price opacity-50 line-through">$69.00</p>
+               </div>
+            </div>
+
+            <!-- Dish-2 -->
+            <div class="dish p-4 py-10 relative bg-white border shadow-md whitespace-nowrap flex flex-col items-start gap-4">
+              <p class="discount px-3 py-1 absolute top-[3%] text-xs text-white bg-red-600">-10%</p>
+               <button class="order-dish position-center absolute z-[-1] px-10 py-2  text-white text-sm bg-red-500 transition-all duration-1000 hover:text-white hover:bg-orange-400">Order Now</button>
+               <img class="m-auto" src="images/food-menu-2.webp" loading="lazy" alt="food-menu-2">
+               <div class="w-full flex gap-2 items-end">
+                  <p class="dish-name opacity-70">Noddles</p>
+                  <div class="starts text-dark-orange">
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                  </div>
+               </div>
+               <h3 class="text-lg">Burger King Whopper</h3>
+               <div class="dish-price-section flex gap-2">
+                  <p class="text-red-600">PRICE:</p>
+                  <span class="current-price text-dark-orange">$29.00</span>
+                  <p class="old-price opacity-50 line-through">$39.00</p>
+               </div>
+            </div>
+
+            <!-- Dish-3 -->
+            <div class="dish p-4 py-10 relative bg-white border shadow-md whitespace-nowrap flex flex-col items-start gap-4">
+              <p class="discount px-3 py-1 absolute top-[3%] text-xs text-white bg-red-600">-25%</p>
+               <button class="order-dish position-center absolute z-[-1] px-10 py-2  text-white text-sm bg-red-500 transition-all duration-1000 hover:text-white hover:bg-orange-400">Order Now</button>
+               <img class="m-auto" src="images/food-menu-3.webp" loading="lazy" alt="food-menu-3">
+               <div class="w-full flex gap-2 items-end">
+                  <p class="dish-name opacity-70">Pizzas</p>
+                  <div class="starts text-dark-orange">
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star-half-outline"></ion-icon>
+                  </div>
+               </div>
+               <h3 class="text-lg">White Castle Pizzas</h3>
+               <div class="dish-price-section flex gap-2">
+                  <p class="text-red-600">PRICE:</p>
+                  <span class="current-price text-dark-orange">$49.00</span>
+                  <p class="old-price opacity-50 line-through">$75.00</p>
+               </div>
+            </div>
+
+            <!-- Dish-4 -->
+            <div class="dish p-4 py-10 relative bg-white border shadow-md whitespace-nowrap flex flex-col items-start gap-4">
+              <p class="discount px-3 py-1 absolute top-[3%] text-xs text-white bg-red-600">-20%</p>
+               <button class="order-dish position-center absolute z-[-1] px-10 py-2  text-white text-sm bg-red-500 transition-all duration-1000 hover:text-white hover:bg-orange-400">Order Now</button>
+               <img class="m-auto" src="images/food-menu-4.webp" loading="lazy" alt="food-menu-4">
+               <div class="w-full flex gap-2 items-end">
+                  <p class="dish-name opacity-70">Burrito</p>
+                  <div class="starts text-dark-orange">
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                  </div>
+               </div>
+               <h3 class="text-lg">Bell Burrito Supreme</h3>
+               <div class="dish-price-section flex gap-2">
+                  <p class="text-red-600">PRICE:</p>
+                  <span class="current-price text-dark-orange">$59.00</span>
+                  <p class="old-price opacity-50 line-through">$69.00</p>
+               </div>
+            </div>
+
+            <!-- Dish-5 -->
+            <div class="dish p-4 py-10 relative bg-white border shadow-md whitespace-nowrap flex flex-col items-start gap-4">
+              <p class="discount px-3 py-1 absolute top-[3%] text-xs text-white bg-red-600">-5%</p>
+               <button class="order-dish position-center absolute z-[-1] px-10 py-2  text-white text-sm bg-red-500 transition-all duration-1000 hover:text-white hover:bg-orange-400">Order Now</button>
+               <img class="m-auto" src="images/food-menu-5.webp" loading="lazy" alt="food-menu-5">
+               <div class="w-full flex gap-2 items-end">
+                  <p class="dish-name opacity-70">Nuggets</p>
+                  <div class="starts text-dark-orange">
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star-half-outline"></ion-icon>
+                  </div>
+               </div>
+               <h3 class="text-lg">Kung Pao Chicken BBQ</h3>
+               <div class="dish-price-section flex gap-2">
+                  <p class="text-red-600">PRICE:</p>
+                  <span class="current-price text-dark-orange">$49.00</span>
+                  <p class="old-price opacity-50 line-through">$54.00</p>
+               </div>
+            </div>
+
+            <!-- Dish-6 -->
+            <div class="dish p-4 py-10 relative bg-white border shadow-md whitespace-nowrap flex flex-col items-start gap-4">
+              <p class="discount px-3 py-1 absolute top-[3%] text-xs text-white bg-red-600">-15%</p>
+               <button class="order-dish position-center absolute z-[-1] px-10 py-2  text-white text-sm bg-red-500 transition-all duration-1000 hover:text-white hover:bg-orange-400">Order Now</button>
+               <img class="m-auto" src="images/food-menu-6.webp" loading="lazy" alt="food-menu-6">
+               <div class="w-full flex gap-2 items-end">
+                  <p class="dish-name opacity-70">Chicken</p>
+                  <div class="starts text-dark-orange">
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                     <ion-icon name="star"></ion-icon>
+                  </div>
+               </div>
+               <h3 class="text-lg">Wendy's Chicken</h3>
+               <div class="dish-price-section flex gap-2">
+                  <p class="text-red-600">PRICE:</p>
+                  <span class="current-price text-dark-orange">$49.00</span>
+                  <p class="old-price opacity-50 line-through">$69.00</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+      <!-- *** Quality-section *** -->
+
+      <section class="quality-section w-full mb-20 bg-cover bg-no-repeat" style="background-image: url(images/hero-bg.webp);">
+         <img class="zig-zag w-full rotate-180" src="images/shape-grey.webp" alt="shape-grey">
+         <div class="quality-parts px-20 pt-20 text-white flex items-center gap-10 max-[500px]:flex-col max-[500px]:justify-center max-[500px]:text-center">
+            <div class="quality-left w-1/2 max-[500px]:w-[90%]">
+               <h3 class="font-bold text-[2.5rem]">The Foodie Have Excellent Of <span class="text-dark-orange">Quality Burgers!</span></h3>
+               <p class="my-8">The restaurants in Hangzhou also catered to many northern Chinese who had fled south from Kaifeng during the Jurchen invasion of the 1120s, while it is also known that many restaurants were run by families.</p>
+               <button class="btn mb-1">Order Now</button>
+            </div>
+            <div class="quality-right w-1/2 relative max-[500px]:w-[90%]">
+               <img class="scale-[1.2]" src="images/quality-burger.webp" loading="lazy" alt="quality-burger">
+               <img class="w-1/3 absolute top-0 -left-[3%] " style="animation: scaler 1s linear infinite alternate;" src="images/quality-offer.webp" alt="quality-offer">
+            </div>
+         </div>
+         <img class="zig-zag w-full" src="images/shape-white.webp" alt="shape-white">
+      </section>
+
+
+      <!-- *** Delivery-section *** -->
+
+      <section class="delivery-section w-full p-20 flex max-[500px]:px-10 max-[500px]:flex-col">
+         <div class="delivery-left w-1/2 max-[500px]:w-3/4">
+            <h3 class="font-bold text-[2.5rem]">A Moments Of Delivered On <span class="text-dark-orange">Right Time</span> & Place</h3>
+            <p class="my-8 opacity-70">The restaurants in Hangzhou also catered to many northern Chinese who had fled south from Kaifeng during the Jurchen invasion of the 1120s, while it is also known that many restaurants were run by families.</p>
+            <button class="btn text-white hover:bg-[var(--dark-orange)]">Order Now</button>
+         </div>
+
+         <div class="delivery-right relative w-1/2 max-[500px]:w-3/4">
+            <img class="w-[90%]" src="images/delivery-banner-bg.webp" loading="lazy" alt="delivery-banner-bg">
+            <img class="w-[90%] absolute top-0" style="animation: cycling 2s ease infinite alternate;" src="images/delivery-boy.svg" loading="lazy" alt="delivery-boy">
+         </div>
+      </section>
+
+
+      <!-- *** Testimonial-section *** -->
+
+      <section class="Testimonial-section w-full bg-section">
+         <img class="zig-zag w-full rotate-180" src="images/shape-white.webp" alt="shape-white">
+         <div class="Testimonial-info w-[80%] pt-20 m-auto text-center">
+            <p class="text-red-600 font-bold mb-2">Testimonials</p>
+            <h3 class="font-bold text-[2.5rem] mb-4">Our Customers <span class="text-dark-orange">Reviews</span></h3>
+            <p class="mb-4 opacity-70">Food is any substance consumed to provide nutritional support for an organism.</p>
+         </div>
+
+         <div class="chef-review-section w-[85%] m-auto py-10 scrollbar overflow-y-hidden overflow-x-auto grid grid-flow-col gap-2 max[500px]:w-[90%]">
+            
+            <!-- Chef-1 -->
+            <div class="chef-review min-w-80 p-8 bg-white border shadow-md flex flex-col gap-4">
+               <div class="chef-info flex gap-2 items-center">
+                  <img class="w-1/4 rounded-full" src="images/chef-1.webp" loading="lazy" alt="chef-1">
+                  <div>
+                     <p class="chef-name font-bold">Robert William</p>
+                     <p class="chef-company text-sm opacity-70">Chef Kingfisher</p>
+                  </div>
+               </div>
+               <p class="chef-message opacity-70">"I would be lost without restaurant. I would like to personally thank you for your outstanding product."</p>
+               <div class="starts text-dark-orange">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+               </div>
+            </div>
+
+            <!-- Chef-2 -->
+            <div class="chef-review min-w-80 p-8 bg-white border shadow-md flex flex-col gap-4">
+               <div class="chef-info flex gap-2 items-center">
+                  <img class="w-1/4 rounded-full" src="images/chef-2.webp" loading="lazy" alt="chef-2">
+                  <div>
+                     <p class="chef-name font-bold">Thomas Josef</p>
+                     <p class="chef-company text-sm opacity-70">Chef Getforce</p>
+                  </div>
+               </div>
+               <p class="chef-message opacity-70">"I would be lost without restaurant. I would like to personally thank you for your outstanding product."</p>
+               <div class="starts text-dark-orange">
+                 <ion-icon name="star"></ion-icon>
+                 <ion-icon name="star"></ion-icon>
+                 <ion-icon name="star"></ion-icon>
+                 <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+               </div>
+            </div>
+
+            <!-- Chef-3 -->
+            <div class="chef-review min-w-80 p-8 bg-white border shadow-md flex flex-col gap-4">
+               <div class="chef-info flex gap-2 items-center">
+                  <img class="w-1/4 rounded-full" src="images/chef-3.webp" loading="lazy" alt="chef-3">
+                  <div>
+                     <p class="chef-name font-bold">Charles Richard</p>
+                     <p class="chef-company text-sm opacity-70">Chef Angela</p>
+                  </div>
+               </div>
+               <p class="chef-message opacity-70">"I would be lost without restaurant. I would like to personally thank you for your outstanding product."</p>
+               <div class="starts text-dark-orange">
+                 <ion-icon name="star"></ion-icon>
+                 <ion-icon name="star"></ion-icon>
+                 <ion-icon name="star"></ion-icon>
+                 <ion-icon name="star"></ion-icon>
+                 <ion-icon name="star"></ion-icon>
+               </div>
+            </div>
+         </div>
+         <img class="zig-zag w-full" src="images/shape-white.webp" alt="shape-white">
+      </section>
+
+
+      <!-- *** Offer-section *** -->
+
+      <section class="offer-section w-full p-10 grid gap-2 grid-cols-4 max-[550px]:grid-cols-1 min-[500px]:p-20">
+         
+         <!-- Offer-1 -->
+         <div class="offer row-span-2 relative overflow-hidden min-[550px]:col-span-2">
+            <img class="banner w-full h-full object-cover absolute transition-all duration-500" src="images/banner-1.webp" loading="lazy" alt="banner-1">
+            <div class="offer-info w-2/3 h-full px-4 py-10 relative text-white flex flex-col justify-center gap-4">
+               <p class="font-bold text-3xl">50% Off Now!</p>
+               <h3 class="font-bold text-3xl">Discount For Delicious Tasty Burgers!</h3>
+               <p>Sale off 50% only this week</p>
+               <button class="w-fit px-6 py-2 text-sm font-medium bg-[var(--dark-orange)] transition-all duration-300 hover:text-white hover:bg-black">Order Now</button>
+            </div>
+         </div>
+
+         <!-- Offer-2  -->
+         <div class="offer relative overflow-hidden">
+            <img class="banner w-full h-full object-cover absolute transition-all duration-500" src="images/banner-2.webp"  loading="lazy" alt="banner-2">
+            <div class="offer-info w-2/3 p-4 relative text-white flex flex-col justify-center gap-4">
+               <h3 class="font-bold text-3xl">Delicious Pizza</h3>
+               <p>50% off Now</p>
+               <button class="w-fit px-6 py-2 text-sm font-medium bg-[var(--dark-orange)] transition-all duration-300 hover:text-white hover:bg-black">Order Now</button>
+            </div>
+         </div>
+
+         <!-- offer-3 -->
+         <div class="offer relative overflow-hidden">
+            <img class="banner w-full h-full object-cover absolute transition-all duration-500" src="images/banner-3.webp"  loading="lazy" alt="banner-3">
+            <div class="offer-info w-2/3 p-4 relative text-white flex flex-col justify-center gap-4">
+               <h3 class="font-bold text-3xl">American Burgers</h3>
+               <p>50% off Now</p>
+               <button class="w-fit px-6 py-2 text-sm font-medium bg-[var(--dark-orange)] transition-all duration-300 hover:text-white hover:bg-black">Order Now</button>
+            </div>
+         </div>
+
+         <!-- offer-4 -->
+         <div class="offer min-[550px]:col-span-2 relative overflow-hidden">
+            <img class="banner w-full h-full object-cover absolute transition-all duration-500" src="images/banner-4.webp"  loading="lazy" alt="banner-4>
+            <div class="offer-info p-4 relative text-white flex flex-col justify-center items-end gap-4">
+               <h3 class="font-bold text-3xl">Tasty Buzzed Pizza</h3>
+               <p>Sale off 50% only this week</p>
+               <button class="w-fit px-6 py-2 text-sm font-medium bg-[var(--dark-orange)] transition-all duration-300 hover:text-white hover:bg-black">Order Now</button>
+            </div>
+         </div>
+      </section>
+
+
+      <!-- *** Blog-section *** -->
+
+      <section class="blog-section blog-sec w-full bg-section">
+         <img class="zig-zag w-full rotate-180" src="images/shape-white.webp" alt="zig-zag">
+         <div class="blog-common-info w-[85%] pt-20 m-auto text-center max-[500px]:w-[90%]">
+            <p class="text-red-600 font-bold mb-2">Latest Blog Posts</p>
+            <h3 class="font-bold text-[2.5rem] mb-4">This Is All About <span class="text-dark-orange">Foods</span></h3>
+            <p class="mb-4 opacity-70">Food is any substance consumed to provide nutritional support for an organism.</p>
+         </div>
+
+         <div class="blog-container w-[80%] m-auto py-10 scrollbar overflow-y-hidden overflow-x-auto grid gap-4 grid-flow-col">
+            
+            <!-- Blog-1 -->
+            <div class="blog min-w-64 pb-10 relative bg-white border shadow-sm">
+               <img class="w-full" src="images/blog-1.webp" loading="lazy" alt="blog-1">
+               <p class="w-fit px-3 py-1 absolute top-4 right-4 font-bold text-xs text-white bg-[var(--dark-orange)]">PIZZA</p>
+               
+               <div class="blogger-info w-[90%] m-auto py-5 font-bold flex items-center gap-4">
+                  <div class="date-section flex items-center gap-2 cursor-pointer ">
+                     <ion-icon name="calendar-outline" class="text-orange-600"></ion-icon>
+                     <p class="text-xs transition-colors duration-300 hover:text-[var(--dark-orange)] max-[550px]:text-[0.5rem]">JUL 30 2023</p>
+                  </div>
+                  <div class="personal-info flex items-center gap-2 cursor-pointer ">
+                     <ion-icon name="person-outline" class="text-orange-600"></ion-icon>
+                     <p class="text-xs transition-colors duration-300 hover:text-[var(--dark-orange)] max-[550px]:text-[0.5rem]">OM CHAUDHARY</p>
+                  </div>
+               </div>
+               
+               <div class="blog-info w-[90%] m-auto flex flex-col gap-4 ">
+                  <h3 class="font-bold text-xl transition-all duration-300 cursor-pointer hover:underline hover:opacity-80">What Do You Think About Cheese Pizza Recipes?</h3>
+                  <p>Financial experts support or help you to to find out which way you can raise your funds more...</p>
+                  <div class="read-more font-bold text-xs transition-all duration-500 cursor-pointer flex items-center gap-2 hover:text-orange-500 hover:gap-3">
+                     <p>READ MORE</p>
+                     <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Blog-2 -->
+            <div class="blog min-w-64 pb-10 relative bg-white border shadow-sm">
+               <img class="w-full" src="images/blog-2.webp" loading="lazy" alt="blog-2">
+               <p class="w-fit px-3 py-1 absolute top-4 right-4 font-bold text-xs text-white bg-[var(--dark-orange)]">BURGER</p>
+               
+               <div class="blogger-info w-[90%] m-auto py-5 font-bold flex items-center gap-4">
+                  <div class="date-section flex items-center gap-2 cursor-pointer ">
+                     <ion-icon name="calendar-outline" class="text-orange-600"></ion-icon>
+                     <p class="text-xs transition-colors duration-300 hover:text-[var(--dark-orange)] max-[550px]:text-[0.5rem]">JAN 07 2023</p>
+                  </div>
+                  <div class="personal-info flex items-center gap-2 cursor-pointer ">
+                     <ion-icon name="person-outline" class="text-orange-600"></ion-icon>
+                     <p class="text-xs transition-colors duration-300 hover:text-[var(--dark-orange)] max-[550px]:text-[0.5rem]">OM CHAUDHARY</p>
+                  </div>
+               </div>
+               
+               <div class="blog-info w-[90%] m-auto flex flex-col gap-4 ">
+                  <h3 class="font-bold text-xl transition-all duration-300 cursor-pointer hover:underline hover:opacity-80">Making Chicken Strips With New Delicious Ingridents.</h3>
+                  <p>Financial experts support or help you to to find out which way you can raise your funds more...</p>
+                  <div class="read-more font-bold text-xs transition-all duration-500 cursor-pointer flex items-center gap-2 hover:text-orange-500 hover:gap-3">
+                     <p>READ MORE</p>
+                     <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Blog-3 -->
+            <div class="blog min-w-64 pb-10 relative bg-white border shadow-sm">
+               <img class="w-full" src="images/blog-3.webp" loading="lazy" alt="blog-3">
+               <p class="w-fit px-3 py-1 absolute top-4 right-4 font-bold text-xs text-white bg-[var(--dark-orange)]">CHICKEN</p>
+               
+               <div class="blogger-info w-[90%] m-auto py-5 font-bold flex items-center gap-4">
+                  <div class="date-section flex items-center gap-2 cursor-pointer ">
+                     <ion-icon name="calendar-outline" class="text-orange-600"></ion-icon>
+                     <p class="text-xs transition-colors duration-300 hover:text-[var(--dark-orange)] max-[550px]:text-[0.5rem]">JUL 07 2023</p>
+                  </div>
+                  <div class="personal-info flex items-center gap-2 cursor-pointer ">
+                     <ion-icon name="person-outline" class="text-orange-600"></ion-icon>
+                     <p class="text-xs transition-colors duration-300 hover:text-[var(--dark-orange)] max-[550px]:text-[0.5rem]">OM CHAUDHARY</p>
+                  </div>
+               </div>
+               
+               <div class="blog-info w-[90%] m-auto flex flex-col gap-4 ">
+                  <h3 class="font-bold text-xl transition-all duration-300 cursor-pointer hover:underline hover:opacity-80">Innovative Hot Chessyraw Pasta Make Creator Fact.</h3>
+                  <p>Financial experts support or help you to to find out which way you can raise your funds more...</p>
+                  <div class="read-more font-bold text-xs transition-all duration-500 cursor-pointer flex items-center gap-2 hover:text-orange-500 hover:gap-3">
+                     <p>READ MORE</p>
+                     <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <img class="zig-zag w-full" src="images/shape-white.webp" alt="shape-white">
+      </section>
+
+
+      <!-- *** Footer-section *** -->
+      <footer class="footer footer-sec w-full py-28 relative overflow-hidden bg-contain bg-bottom bg-no-repeat border-b border-black" style="background-image: url(images/footer-illustration.webp);">
+         <div class="footer-content-section px-20 grid gap-4 max-[550px]:grid-cols-2 max-[400px]:grid-cols-1">
+            
+            <!-- Footer-content-1 -->
+            <div class="footer-content p-4 flex flex-col gap-4">
+               <a href="#" class="header-name font-bold text-3xl">YumYard</a>
+               <p class="opacity-70 ">Financial experts support or help you to to find out which way you can raise your funds more.</p>
+               <div class="social-links flex gap-1">
+                  <button aria-label="facebook" class="w-fit px-2 py-1 text-white text-center bg-[var(--dark-orange)] transition-colors duration-300 hover:bg-black">
+                     <ion-icon name="logo-facebook"></ion-icon>
+                  </button>
+                  <button aria-label="twitter" class="w-fit px-2 py-1 text-white text-center bg-[var(--dark-orange)] transition-colors duration-300 hover:bg-black">
+                     <ion-icon name="logo-twitter"></ion-icon>
+                  </button>
+                  <button aria-label="instagram" class="w-fit px-2 py-1 text-white text-center bg-[var(--dark-orange)] transition-colors duration-300 hover:bg-black">
+                     <ion-icon name="logo-instagram"></ion-icon>
+                  </button>
+                  <button aria-label="pinterest" class="w-fit px-2 py-1 text-white text-center bg-[var(--dark-orange)] transition-colors duration-300 hover:bg-black">
+                     <ion-icon name="logo-pinterest"></ion-icon>
+                  </button>
+               </div>
+            </div>
+
+            <!-- Footer-content-2 -->
+            <div class="footer-content p-4 flex flex-col gap-4">
+               <h3 class="text-lg font-bold">Contact Info</h3>
+               <a class="opacity-70" href="tel:+91 1053230821">+91-1053230821</a>
+               <a class="opacity-70" href="mailto:Info@yumyard.com">Info@yumyard.com</a>
+               <a class="opacity-70" href="#">153 Williamson Plaza, Maggieberg, MT 09514</a>
+            </div>
+
+            <!-- Footer-content-3 -->
+            <div class="footer-content p-4 flex flex-col gap-4">
+               <h3 class="text-lg font-bold">Opening Hours</h3>
+               <p class="opacity-70">Monday-Friday: 08:00-22:00</p>
+               <p class="opacity-70">Tuesday 4PM: Till Mid Night</p>
+               <p class="opacity-70">Saturday: 10:00-16:00</p>
+            </div>
+
+            <!-- Footer-content-4 -->
+            <form class="footer-content min-w-68 p-4 bg-white shadow-lg border">
+               <h3 class="text-lg font-bold mb-4">Book a Table</h3>
+               <div class="required-input text-sm opacity-70 grid grid-cols-2 gap-2">
+                  <input class="border p-1" id="name"type="text" placeholder="Your Name" autocomplete="off" required>
+                  <input class="border p-1" id="email" type="email" placeholder="Email" autocomplete="off" required>
+                  <select class="border p-1" id="person" placeholder="Person">
+                     <option value="1">Person</option>
+                     <option value="2">2 Person</option>
+                     <option value="3">3 Person</option>
+                     <option value="4">4 Person</option>
+                     <option value="5">5 Person</option>
+                     <option value="5+">5+ Person</option>
+                  </select>
+                  <input class="border p-1" id="booking_date" type="date" required>
+               </div>
+               <textarea class="w-full h-24 border p-2 my-2" id="message" placeholder="Message"></textarea>
+               <button class="btntemplate px-4 py-2 mb-8" type="submit">Book a Table</button>
+            </form>
+         </div>
+         <img class="craft-cycle w-[14%] absolute bottom-0" style="animation:moving 20s linear infinite;" src="images/delivery-boy.svg" alt="delivery-boy">
+      </footer>
+
+
+      <!-- *** Copyright-message footer *** -->
+
+      <footer class="p-4 text-center opacity-60">
+         <span>&copy 2022</span> 
+         <a class="hover:underline" href="https://github.com/omchaudhary007" target="_blank">Omchaudhary07</a>
+         <span>All Rights Reserved.</span>
+      </footer>
+
+
+      <!-- Scroll to top button-->
+
+      <button id="scroller" aria-label="scroller" class="w-10 h-10 fixed bottom-[5%] right-[2%] text-center rounded-full text-white bg-[var(--dark-orange)] hover:bg-black">
+         <ion-icon name="chevron-up-outline"></ion-icon>
+      </button>
+
+      <!-- Javascript links  -->
+      
+      <script
+         type="module"
+         src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+         ></script>
+      <script
+         nomodule
+         src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+         ></script>
+      <script src="script.js"></script>
+   </body>
+</html>
